@@ -4,14 +4,12 @@ class Solution:
         j=1
         while j<len(nums):
             if nums[i]==nums[j]:
-                while nums.count(nums[i])!=1:
-                    nums.remove(nums[i])
-                i+=1
-                j=i+1
+                nums.pop(i)
             else:
                 i+=1
-                j=i+1
+                j+=1
             
         
                 
+            
             
