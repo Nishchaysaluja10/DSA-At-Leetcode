@@ -4,8 +4,8 @@ import java.util.Collections;
 public class method {
     public static int find(int n, ArrayList<Integer> ar) {
         int ans = 0;
-        for (int k = 0; k < ar.size() - 1; k++) { // fix bounds
-            if (ar.get(k) <= n && ar.get(k + 1) > n) { // allow exact match
+        for (int k = 0; k < ar.size() - 1; k++) { 
+            if (ar.get(k) <= n && ar.get(k + 1) > n) { 
                 ans = k;
             }
         }
@@ -14,7 +14,6 @@ public class method {
 
     public static ArrayList<Integer> binarys(int n, ArrayList<Integer> ar2) {
         ArrayList<Integer> ar = new ArrayList<>();
-        // integer-safe power of two
         for (int i = 0; (1 << i) <= n; i++) {
             ar.add(1 << i);
         }
@@ -37,16 +36,16 @@ class Solution {
         Collections.reverse(ar2);
 
         int MOD = 1_000_000_007;
-        int[] a1 = new int[queries.length]; // final int[] result
+        int[] a1 = new int[queries.length];
 
         for (int i = 0; i < queries.length; i++) {
             int c = queries[i][0];
             int b = queries[i][1];
-            long val = 1; // do multiplication in long to avoid overflow
+            long val = 1; 
             for (int z = c; z <= b; z++) {
-                val = (val * ar2.get(z)) % MOD; // mod to keep value in range
+                val = (val * ar2.get(z)) % MOD;
             }
-            a1[i] = (int) val; // safe to cast now
+            a1[i] = (int) val; 
         }
         return a1;
     }
