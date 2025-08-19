@@ -13,15 +13,11 @@ class Solution {
                     idx+=1;
                 }
                 else{
-                    int x=1;
-                    while(counter!=0){
-                        no_of_zeros+=x;
-                        counter-=1;
-                        x+=1;
+                    no_of_zeros+=((counter)*(counter+1))/2;
+                    counter=0;
                     }
                 }
             }
-        }
         if(counter!=0){
         int x=1;
         while(counter!=0){
