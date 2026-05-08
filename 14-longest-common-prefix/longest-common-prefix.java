@@ -7,7 +7,7 @@ class Solution {
         }
         else{
         int pos = 0;
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
         char curr =strs[0].charAt(pos) ;
         boolean check = true ;
         while(check == true){  
@@ -17,13 +17,13 @@ class Solution {
                 break ; }
             }
             if(check==true){
-                answer+=strs[0].charAt(pos);
+                answer.append(strs[0].charAt(pos));
                 pos++;
                 if(strs[0].length()==pos)break;
                 curr=strs[0].charAt(pos);
             }
         }
-        return answer;
+        return answer.toString();
         }
     }
 }
