@@ -11,8 +11,9 @@ class Solution {
                 if(target-curr>0){
                     while(left<right && nums[left+1]==nums[left])left++;
                     left++;}
-                else if(target-curr<0)
-                    {right--;}
+                else if(target-curr<0){
+                   while(left<right && nums[right-1]==nums[right])right--;
+                   right--;} 
                 else{
                     return curr;
                 }
